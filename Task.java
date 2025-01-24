@@ -27,7 +27,7 @@ class CeasarCipher{
         return h;
     }
 }
-public class Main {
+public class Task {
     public static void main(String[] args) {
         CeasarCipher c = new CeasarCipher();
         Scanner s = new Scanner(System.in);
@@ -44,11 +44,12 @@ public class Main {
                 break;
 
             } else if (f.equalsIgnoreCase("de")) {
-                System.out.println(c.Cipher(d, -t));
+                System.out.println(c.Cipher(d, 26-t));
                 break;
             } else {
                 System.out.println("INVALID");
             }
         }
+        s.close();
     }
 }
